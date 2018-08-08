@@ -11,6 +11,8 @@ class Blog(models.Model):
         return self.title
 
 class UserEmail(models.Model):
+    first_name = models.CharField(max_length=30,null=True, blank=True)
+    last_name = models.CharField(max_length=40, null=True, blank=True)
     email = models.EmailField()
 
     def __str__(self):
