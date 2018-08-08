@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TISCO สินเชื่อและประกัน</title>
+
+
+    <link rel="stylesheet" href="{% static '/csscode/bootstrap/css/bootstrap.min.css'%}"/>
+    <link href="{% static '/csscode/css/1-col-portfolio.css'%}" rel="stylesheet">
+    <script src="{% static '/csscode/vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static '/csscode/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/csscode/ifElsSctipt.js'%}"></script>
+
+	<!------font------>
+	<link href="https://fonts.googleapis.com/css?family=Taviraj:100,100i&amp;subset=thai" rel="stylesheet">
+<style>
+      body {
+        font-family: 'Taviraj', serif;
+        font-size: 20px;
+      }
+    </style> 
+	<!------font------>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="opacity: 0.8">
+      <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="Image/tiscologo.png" width="50" height="50"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">สินเชื่อ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index3.html">ประกัน</a>
+            </li>
+            <li class="nav-item"><input type="text" class="form-control" placeholder="search"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <header>
+        <div class="container">
+
+		
+      <!-- Page Heading -->
+      <h1 class="my-4 text-center text-primary">กรุณาใส่ข้อมูลให้ครบ</h1>
+      <div class="container">
+          <form class="form-horizontal">
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">ชื่อ:</h5>
+                  <input type="text" placeholder="FIRST NAME" class="col-xl-12 form-control">
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">นามสกุล:</h5>
+                  <input type="text" placeholder="LAST NAME" class="col-xl-12 form-control">
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">อายุ:</h5>
+                  <select class="col-xl-12 form-control" id="ageGroup">
+                      <option>ช่วงอายุ</option>
+                      <option value="0-20">0-20</option>
+                      <option value="21-40">21-40</option>
+                      <option value="41-60">41-60</option>
+                      <option value="61-80">61-80</option>
+                      <option value="81-100">81-100</option>
+                  </select>
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">เพศ:</h5>
+                  <select class="form-control col-xl-12" id="gender">
+                      <option>เลือกเพศ</option>
+                      <option value="male">ชาย</option>
+                      <option value="female">หญิง</option>
+                  </select>
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">การศึกษา:</h5>
+                  <select class="col-xl-12 form-control" id="education">
+                      <option>เลือกระดับการศึกษา</option>
+                      <option value="iliterate">Iliterate</option>
+                      <option value="junior high school">Junior High School</option>
+                      <option value="primary">Primary</option>
+                      <option value="professional course">Professional Course</option>
+                      <option value="senior high school">Senior High School</option>
+                      <option value="university degree">University Degree</option>
+                      <option value="unknown">Unknown</option>
+                  </select>
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">การสมรส:</h5>
+                  <select class="col-xl-12 form-control" id="maritial">
+                      <option>สถานะภาพ</option>
+                      <option value="married">married</option>
+                      <option value="single">single</option>
+                      <option value="divorced">divorced</option>
+                  </select>
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">งาน:</h5>
+                  <select class="col-xl-12 form-control" id="job">
+                      <option>งาน</option>
+                      <option value="admin">admin</option>
+                      <option value="blue-collar">blue-collar</option>
+                      <option value="enterpreneur">entrepreneur</option>
+                      <option value="housemaid">housemaid</option>
+                      <option value="management">management</option>
+                      <option value="retired">retired</option>
+                      <option value="self-employed">self-employed</option>
+                      <option value="services">services</option>
+                      <option value="student">student</option>
+                      <option value="technician">technician</option>
+                      <option value="unemployed">unemployed</option>
+                      <option value="unknown">unknown</option>
+                  </select>
+              </div>
+              
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Housing?:</h5>
+                  <select class="col-xl-12 form-control" id="housing">
+                      <option>มีบ้านหรือไม่</option>
+                      <option value="yes">yes</option>
+                      <option value="no">no</option>
+                  </select>
+              </div>
+              
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Loan:</h5>
+                  <select class="col-xl-12 form-control" id="loan">
+                      <option>......</option>
+                      <option value="yes">yes</option>
+                      <option value="no">no</option>
+                  </select>
+              </div>
+              
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Contract:</h5>
+                  <select class="col-xl-12 form-control" id="contact">
+                      <option>ประเภทการติดต่อ</option>
+                      <option value="Telephone">Telephone</option>
+                      <option value="Cellula">Cellula</option>
+                  </select>
+              </div>
+              
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Salary:</h5>
+                  <select class="form-control col-xl-12" id="SalaryGroup">
+                      <option>ระดับเงินเดือน</option>
+                      <option value="10001-25000">10001-25000</option>
+                      <option value="25001-50000">25001-50000</option>
+                      <option value="50001-75000">50001-75000</option>
+                      <option value="75001-100000">75001-100000</option>
+                  </select>
+              </div>
+              
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Child:</h5>
+                  <select class="form-control col-xl-12" id="Childe">
+                      <option>จำนวนบุตร</option>
+                      <option value="zero">ไม่มีบุตร</option>
+                      <option value="one">1 คน</option>
+                      <option value="two">2 คน</option>
+                      <option value="treeplus">3 คนขึ้นไป</option>
+                  </select>
+              </div>
+              
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Car:</h5>
+                  <select class="col-xl-12 form-control" id="car">
+                      <option>มีรถหรือไม่</option>
+                      <option value="yes">yes</option>
+                      <option value="no">no</option>
+                  </select>
+              </div>
+              <div class="form-group input-group">
+                  <h5 class="col-xl-2">Car Brand:</h5>
+                  <select class="form-control col-xl-12" id="CarBrand">
+                      <option>ยี่ห้อรถยนต์</option>
+                      <option value="no">no</option>
+                      <option value="ford">ford</option>
+                      <option value="mazda">mazda</option>
+                      <option value="other">others</option>
+                  </select>
+              </div>
+              <div class="text-center">
+                  <button class="btn btn-primary btn-lg" onclick="preDi()">เริ่มวิเคราะห์</button>
+              </div><br>
+          </form>
+      </div>
+     
+
+    </div>
+    <!-- /.container -->
+    </header>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">POWERED BY BOOTSTRAP</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+  </body>
+
+</html>

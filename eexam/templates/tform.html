@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Register Form</title>
+</head>
+<body>
+ <form action="insert.php" method="POST">
+ {% csrf_token %}
+  <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="first_name" required></td>
+   </tr>
+   <tr>
+    <td>Last name :</td>
+    <td><input type="text" name="last_name" required></td>
+   </tr>
+   
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+ </form>
+</body>
+</html>
